@@ -58,10 +58,13 @@ jobs:
         with:
           terraform_version: 1.6.0
 
-      # Step 6: Terraform Init
+      # Step 6: Terraform Init (with S3 backend)
       - name: Terraform Init
         working-directory: ./terraform
         run: terraform init
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       # Step 7: Terraform Plan
       - name: Terraform Plan

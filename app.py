@@ -47,7 +47,7 @@ class PredictionResponse(BaseModel):
 # Initialize FastAPI app
 app = FastAPI(
     title="Iris Classification API",
-    description="A simple ML API for classifying Iris flowers using Logistic Regression",
+    description="Classifying Iris flowers using Logistic Regression",
     version="1.0.0"
 )
 
