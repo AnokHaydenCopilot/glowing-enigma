@@ -35,7 +35,7 @@ resource "aws_ecr_repository" "iris_api" {
   tags = {
     Name        = "Iris Classification API"
     Environment = var.environment
-    Project     = "MLOps-Demo"
+    Project     = "Kursova"
   }
 }
 
@@ -166,6 +166,6 @@ resource "aws_apprunner_service" "iris_api" {
   tags = {
     Name        = var.app_name
     Environment = var.environment
-    Project     = "MLOps-Demo"
+    Project     = "Kursova"
   }
 }
